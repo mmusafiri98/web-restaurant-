@@ -2,26 +2,32 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8" /> <!-- Définit l'encodage des caractères pour le fichier HTML -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Rend le site adapté aux mobiles -->
-    <title>Restaurant sallè Élégance</title> <!-- Titre de la page affiché dans l'onglet du navigateur -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Restaurant sallè Élégance</title>
 
-    <!-- Intègre Bootstrap CSS depuis un CDN pour styliser les composants HTML -->
+    <!-- Bootstrap CSS & Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <!-- Intègre les icônes Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-    <!-- Intègre Bootstrap JS (pour le carrousel et les menus déroulants) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <style>
-        /* Personnalisation de la barre de navigation */
+        /* Barre de navigation */
         .navbar-custom {
             background-color: white;
             padding: 15px;
-            /*permete de faire en espacement entre la barre de  et sont contenue exterieure de 15px */
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 999;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        /* Style du bouton personnalisé en haut à droite */
+        /* Pour éviter que le contenu passe sous la navbar */
+        body {
+            padding-top: 140px;
+        }
+
         .btn-primary-custom {
             background-color: rgb(240, 48, 48);
             color: white;
@@ -30,18 +36,15 @@
             border: none;
         }
 
-        /* Taille uniforme des images dans les cartes */
         .card-img-top {
             height: 200px;
             object-fit: cover;
         }
 
-        /* Marge sous le carrousel pour éviter qu'il touche le footer */
         .carousel-inner {
             margin-bottom: 240px;
         }
 
-        /* Marge entre le footer et les éléments précédents */
         footer {
             margin-top: 40px;
         }
@@ -49,23 +52,19 @@
 </head>
 
 <body>
-    <!-- Barre de navigation principale -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-custom">
         <div class="container-fluid">
-            <!-- Logo du restaurant -->
             <a class="navbar-brand" href="#">
                 <img src="logo.jpg" alt="logo" width="120" height="120" />
             </a>
-            <!-- Bouton responsive pour le menu sur petits écrans -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Menu de navigation -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <!-- Liens du menu -->
                     <li class="nav-item">
                         <a class="nav-link text-danger fw-bold" href="index.html">À propos</a>
                     </li>
@@ -73,7 +72,6 @@
                         <a class="nav-link text-danger fw-bold" href="contact.html">Contact</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <!-- Menu déroulant pour les différents menus -->
                         <a class="nav-link dropdown-toggle text-danger fw-bold" href="projet.html" id="navbarDropdown"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             explore les differents plats
@@ -88,7 +86,6 @@
                         </ul>
                     </li>
                 </ul>
-                <!-- Bouton de contact (numéro de téléphone) -->
                 <form class="d-flex">
                     <button class="btn btn-primary-custom" type="button">+977 9845667543</button>
                 </form>
@@ -96,34 +93,31 @@
         </div>
     </nav>
 
-    <!-- Carrousel de cartes -->
+    <!-- Carrousel -->
     <div id="carouselCards" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <h1 class="text-center mt-4">Menu soirée</h1>
 
-            <!-- Premier slide contenant 3 cartes de plats -->
+            <!-- Slide 1 -->
             <div class="carousel-item active">
                 <div class="d-flex flex-wrap justify-content-center gap-3">
-                    <!-- Carte 1 : Spaghetti -->
                     <div class="card" style="width: 30rem;">
-                        <img src="images\img\pasta Pesto.webp" class="card-img-top img-fluid" alt="menu1">
+                        <img src="images/img/pasta Pesto.webp" class="card-img-top img-fluid" alt="menu1">
                         <div class="card-body">
                             <h5 class="card-title">spaghetti con prezzemolo </h5>
                             <p class="card-text">Un plat simple mais raffiné composé de spaghetti al dente... 💰 Prix :
                                 8,50 €</p>
                         </div>
                     </div>
-                    <!-- Carte 2 : Kebab turque -->
                     <div class="card" style="width: 30rem;">
-                        <img src="images\img\kebab.jpg" class="card-img-top img-fluid" alt="menu2">
+                        <img src="images/img/kebab.jpg" class="card-img-top img-fluid" alt="menu2">
                         <div class="card-body">
                             <h5 class="card-title">kebap turque</h5>
                             <p class="card-text">Un sandwich savoureux composé de viande grillée... 💰 Prix : 9,90 €</p>
                         </div>
                     </div>
-                    <!-- Carte 3 : Brochettes de poulet -->
                     <div class="card" style="width: 30rem;">
-                        <img src="images\img\bracciola.jpg" class="card-img-top img-fluid" alt="menu3">
+                        <img src="images/img/bracciola.jpg" class="card-img-top img-fluid" alt="menu3">
                         <div class="card-body">
                             <h5 class="card-title">Brochettes de Poulet Tikka</h5>
                             <p class="card-text">Tendres morceaux de poulet marinés aux épices indiennes... 💰 Prix :
@@ -133,19 +127,17 @@
                 </div>
             </div>
 
-            <!-- Deuxième slide contenant 3 autres cartes -->
+            <!-- Slide 2 -->
             <div class="carousel-item">
                 <div class="d-flex flex-wrap justify-content-center gap-3">
-                    <!-- Carte 4 : Hamburger -->
                     <div class="card" style="width: 30rem;">
-                        <img src="images\img\hamburger.jpg" class="card-img-top img-fluid" alt="menu4">
+                        <img src="images/img/hamburger.jpg" class="card-img-top img-fluid" alt="menu4">
                         <div class="card-body">
                             <h5 class="card-title">Hamburger </h5>
                             <p class="card-text">Sauce tomate épicée, mozzarella, viande savoureuse... 💶 Prix : 12,50 €
                             </p>
                         </div>
                     </div>
-                    <!-- Carte 5 : Assiette grillée orientale -->
                     <div class="card" style="width: 30rem;">
                         <img src="delizia.jpg" class="card-img-top img-fluid" alt="menu5">
                         <div class="card-body">
@@ -154,12 +146,11 @@
                                 17,90 €</p>
                         </div>
                     </div>
-                    <!-- Carte 6 : Kebab croustillant -->
                     <div class="card" style="width: 30rem;">
                         <img src="panino.jpg" class="card-img-top img-fluid" alt="menu6">
                         <div class="card-body">
                             <h5 class="card-title">Kebab croustillant & frites dorées</h5>
-                            <p class="card-text">Pain pita garni de viande grillée, crudits et frites... 💰 Prix : 9,50
+                            <p class="card-text">Pain pita garni de viande grillée, crudités et frites... 💰 Prix : 9,50
                                 €</p>
                         </div>
                     </div>
@@ -167,7 +158,7 @@
             </div>
         </div>
 
-        <!-- Boutons pour faire défiler les slides du carrousel -->
+        <!-- Contrôles -->
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselCards" data-bs-slide="prev">
             <span class="carousel-control-prev-icon"></span>
             <span class="visually-hidden">Précédent</span>
@@ -178,7 +169,7 @@
         </button>
     </div>
 
-    <!-- Pied de page -->
+    <!-- Footer -->
     <footer class="p-3 bg-danger text-white text-center">
         Suivez-nous sur les réseaux sociaux :
         <a href="https://www.facebook.com" target="_blank" class="text-white mx-2">
