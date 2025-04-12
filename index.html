@@ -13,11 +13,17 @@
 
     <style>
         /* Navbar */
-        .navbar-custom {
-            background-color: white;
-            padding: 15px;
-            position:fixed;
-        }
+        /* Navbar */
+.navbar-custom {
+    background-color: white;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999; /* pour rester au-dessus du contenu */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* effet de léger ombrage */
+}
+
 
         /* Section principale */
         .hero-section {
@@ -25,6 +31,7 @@
             align-items: center;
             justify-content: space-between;
             padding: 50px;
+            margin-top: 150px; /* ajuste selon la hauteur de ta navbar */
         }
 
         .hero-text {
