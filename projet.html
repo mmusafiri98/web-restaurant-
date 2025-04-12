@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Restaurant sallè Élégance</title>
+    <title>Restaurant Salle Élégance</title>
 
+    <!-- Bootstrap CSS & Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
 
     <style>
         /* Navbar */
@@ -20,6 +21,11 @@
             width: 100%;
             z-index: 999;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Pour espacer le contenu à cause de la navbar fixe */
+        .carousel-wrapper {
+            margin-top: 160px;
         }
 
         .btn-primary-custom {
@@ -35,12 +41,10 @@
             object-fit: cover;
         }
 
-        /* Ajoute de l’espace entre les cartes et le footer de 200px */
         .carousel-inner {
             margin-bottom: 200px;
         }
 
-        /*ajoute en margin-top pour l espace en haut entre le footer et  le cards et le carrousel de 40px*/
         footer {
             margin-top: 40px;
         }
@@ -52,7 +56,7 @@
     <nav class="navbar navbar-expand-lg navbar-custom">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="images\logo.jpg" alt=" logo" width="120" height="120" />
+                <img src="images/logo.jpg" alt="logo" width="120" height="120" />
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,18 +75,17 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-danger fw-bold" href="projet.html" id="navbarDropdown"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            explore les differents plats
+                            Explore les différents plats
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="projet.html">Menu midi</a></li>
-                            <li><a class="dropdown-item" href="projet2.html">Menu apres midi</a></li>
+                            <li><a class="dropdown-item" href="projet2.html">Menu après-midi</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="projet3.html">Menu soire</a></li>
+                            <li><a class="dropdown-item" href="projet3.html">Menu soirée</a></li>
                         </ul>
                     </li>
-
                 </ul>
                 <form class="d-flex">
                     <button class="btn btn-primary-custom" type="button">+977 9845667543</button>
@@ -91,90 +94,95 @@
         </div>
     </nav>
 
-    <div id="carouselCards" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <h1 class="text-center mt-4">Menu Midi</h1>
+    <!-- Carousel Cards avec décalage haut -->
+    <div class="carousel-wrapper">
+        <div id="carouselCards" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <h1 class="text-center mt-4">Menu Midi</h1>
 
-            <!-- Slide 1 -->
-            <div class="carousel-item active">
-                <div class="d-flex flex-wrap justify-content-center gap-3">
-                    <div class="card" style="width: 30rem;">
-                        <img src="images/img/img-4.jpg" class="card-img-top img-fluid" alt="menu1">
-                        <div class="card-body">
-                            <h5 class="card-title">sandwichs turque </h5>
-                            <p class="card-text">sandwichs (en turc : Türk ekmeği) est un pain traditionnel très
-                                apprécié pour sa texture moelleuse à l’intérieur et sa croûte légèrement croustillante à
-                                l’extérieur.
-                                💶 Prix : 22,80 €
-                            </p>
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <div class="card" style="width: 30rem;">
+                            <img src="images/img/img-4.jpg" class="card-img-top img-fluid" alt="menu1">
+                            <div class="card-body">
+                                <h5 class="card-title">Sandwichs turcs</h5>
+                                <p class="card-text">
+                                    Pain turc moelleux avec croûte croustillante, garni selon vos envies.<br>
+                                    💶 Prix : 22,80 €
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 30rem;">
+                            <img src="images/img/img-3.jpg" class="card-img-top img-fluid" alt="menu2">
+                            <div class="card-body">
+                                <h5 class="card-title">Tramezzino</h5>
+                                <p class="card-text">
+                                    Sandwich italien originaire de Turin, parfait en apéritif.<br>
+                                    💶 Prix : 15,80 €
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 30rem;">
+                            <img src="images/gateau.png" class="card-img-top img-fluid" alt="menu3">
+                            <div class="card-body">
+                                <h5 class="card-title">Génoise moelleuse</h5>
+                                <p class="card-text">
+                                    Gâteau léger à la crème et fraises fraîches.<br>
+                                    💶 Prix : 16,80 €
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    <div class="card" style="width: 30rem;">
-                        <img src="images/img/img-3.jpg" class="card-img-top img-fluid" alt="menu2">
-                        <div class="card-body">
-                            <h5 class="card-title">Tramezzino</h5>
-                            <p class="card-text">Le tramezzino est un sandwich italien originaire de Turin, très
-                                populaire dans les bars à vin, les cafés ou lors des apéritifs.
-                                💶 Prix : 15,80 €</p>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <div class="card" style="width: 30rem;">
+                            <img src="images/img/pizza.jpg" class="card-img-top img-fluid" alt="menu4">
+                            <div class="card-body">
+                                <h5 class="card-title">Pizza Pepperoni</h5>
+                                <p class="card-text">
+                                    Sauce tomate épicée, mozzarella, pepperoni croustillant.<br>
+                                    💶 Prix : 32,80 €
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card" style="width: 30rem;">
-                        <img src="images/gateau.png" class="card-img-top img-fluid" alt="menu3">
-                        <div class="card-body">
-                            <h5 class="card-title">génoise moelleuse</h5>
-                            <p class="card-text">Ce dessert est une génoise moelleuse, recouverte et fourrée de crème
-                                chantilly ou de mascarpone, garnie de fraises fraîches et de décors rouges.
-                                💶 Prix : 16,80 €</p>
+                        <div class="card" style="width: 30rem;">
+                            <img src="images/bg/bg-3.jpg" class="card-img-top img-fluid" alt="menu5">
+                            <div class="card-body">
+                                <h5 class="card-title">Pizzette</h5>
+                                <p class="card-text">
+                                    Mini pizzas garnies pour vos apéritifs ou buffets.<br>
+                                    💶 Prix : 25,80 €
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 30rem;">
+                            <img src="images/bg/bg-1.jpg" class="card-img-top img-fluid" alt="menu6">
+                            <div class="card-body">
+                                <h5 class="card-title">Brunch tropical fruité</h5>
+                                <p class="card-text">
+                                    Assiette fraîche de fruits tropicaux pour bien démarrer la journée.<br>
+                                    💶 Prix : 29,80 €
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Slide 2 -->
-            <div class="carousel-item">
-                <div class="d-flex flex-wrap justify-content-center gap-3">
-                    <div class="card" style="width: 30rem;">
-                        <img src="images/img/pizza.jpg" class="card-img-top img-fluid" alt="menu4">
-                        <div class="card-body">
-                            <h5 class="card-title">Pizza Pepperoni </h5>
-                            <p class="card-text">Base moelleuse, sauce tomate épicée, mozzarella fondue, tranches de
-                                pepperoni croustillantes, et basilic frais.
-                                💶 Prix : 32,80 €
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 30rem;">
-                        <img src="images/bg/bg-3.jpg" class="card-img-top img-fluid" alt="menu5">
-                        <div class="card-body">
-                            <h5 class="card-title">Pizzette</h5>
-                            <p class="card-text">Petites pizzas individuelles de 8 cm, parfaites pour les apéros,
-                                buffets ou snacks. Garnies de fromage, tomates, herbes.
-                                💶 Prix : 25,80 €
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 30rem;">
-                        <img src="images/bg/bg-1.jpg" class="card-img-top img-fluid" alt="menu6">
-                        <div class="card-body">
-                            <h5 class="card-title">Brunch tropical fruité</h5>
-                            <p class="card-text">Un petit-déjeuner frais et coloré avec fruits tropicaux, parfait pour
-                                un début de journée vitaminé.
-                                💶 Prix : 29,80 €</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!-- Contrôles -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselCards" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Précédent</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselCards" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Suivant</span>
+            </button>
         </div>
-
-        <!-- Contrôles -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselCards" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-            <span class="visually-hidden">Précédent</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselCards" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-            <span class="visually-hidden">Suivant</span>
-        </button>
     </div>
 
     <!-- Footer -->
@@ -192,3 +200,4 @@
 </body>
 
 </html>
+
