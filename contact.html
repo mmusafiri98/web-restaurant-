@@ -16,7 +16,7 @@
 
         .navbar-custom {
             background-color: white;
-            padding: 15px; /*on utilise verticalement de haut et en bas en espacement de 15px de exterieure et interieure de mon contenue de mon navbar-custom
+            padding: 15px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
@@ -30,46 +30,38 @@
 
         .form-section {
             background-color: white;
-            padding: 60px 20px; /*on utilise un verticale  de haut et en bas on utilise en espacement entre l exterieure et sont contenue interieure de 60px et de gauche et droite de 20px
+            padding: 60px 20px;
         }
 
         footer {
             background-color: #dc3545;
-            margin-top: 40px; /*on utilise margin-top de 40px pour que la en haut le margin soit de 40px pour mon footer
+            margin-top: 40px;
         }
     </style>
 </head>
 
 <body>
-    <!-- Navbar avec tous le menu comment a propros et contact et explore differents plats on utilise custom fixed-top pour tenir le navbar fixed au nveau de la page -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand">
                 <img src="images/logo.jpg" alt="logo" width="120" height="120" />
             </a>
-            <!-- 
-        Bouton hamburger (menu déroulant) visible uniquement sur les petits écrans. 
-        Quand on clique dessus, il affiche ou masque les liens de navigation grâce au système de collapse de Bootstrap. 
--->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                     <!-- Élément de menu simple vers la page "index.html" -->
                     <li class="nav-item">
                         <a class="nav-link text-danger fw-bold" href="index.html">À propos</a>
                     </li>
-                        <!-- Élément de menu simple vers la page "contact.html" -->
                     <li class="nav-item">
                         <a class="nav-link text-danger fw-bold" href="contact.html">Contact</a>
                     </li>
-                    <!-- Élément de menu simple vers la page "projet.html" -->
                     <li class="nav-item">
                         <a class="nav-link text-danger fw-bold" href="projet.html">Explore les différents plats</a>
                     </li>
-                    <!-- Élément de menu déroulant avec sous-menus projet.html et projet2.html -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-danger fw-bold" href="#" id="navbarDropdown"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -85,20 +77,18 @@
                         </ul>
                     </li>
                 </ul>
-                <!-- c est pour affiche de maniere horizontale le bouton de numeroe et le formualire
-                     <form class="d-flex">
+                <form class="d-flex">
                     <button class="btn btn-primary-custom" type="button">+32 453 367 890 456</button>
                 </form>
             </div>
         </div>
     </nav>
 
-    <!-- Section principale avec le formulaire de reservation -->
+    <!-- Section principale -->
     <section class="form-section">
         <div id="alert" class="alert alert-success alert-dismissible d-none">
             Votre message pour la réservation est arrivé avec succès.
-            <!-- c est bouton permete de ferme le message de alert-->
-            <button class="btn-close" data-bs-dismiss="alert" aria-label="close"></button> 
+            <button class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
         </div>
         <h1 class="text-center mb-4">Réservation de table</h1>
         <form id="form" class="row g-3">
@@ -111,8 +101,8 @@
                 <input type="text" class="form-control" id="nom" placeholder="Insérez votre nom de famille" required>
             </div>
             <div class="col-md-4">
-                <label for="telephone" class="form-label">Numéro de table</label>
-                <input type="num" class="form-control" id="numero" placeholder="Insérez votre numéro de table" required>
+                <label for="telephone" class="form-label">Numéro de téléphone</label>
+                <input type="text" class="form-control" id="telephone" placeholder="Insérez votre numéro de téléphone" required>
             </div>
             <div class="mb-3">
                 <label for="reservation-date" class="form-label">Date de réservation</label>
@@ -134,7 +124,7 @@
             <button type="submit" class="btn btn-primary">Faire une réservation</button>
         </form>
     </section>
-<!--le footer le text sera au centre et la couleur de text sera au centre-->
+
     <footer class="p-3 text-white text-center">
         Suivez-nous sur les réseaux sociaux :
         <a href="https://www.facebook.com" target="_blank" class="text-white mx-2">
@@ -155,4 +145,5 @@
 </body>
 
 </html>
+
 
