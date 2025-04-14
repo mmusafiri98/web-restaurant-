@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Restaurant sallè Élégance</title>
+    <title>Restaurant Sallè Élégance - Menu Soirée</title>
 
     <!-- Bootstrap CSS & Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -12,7 +12,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <style>
-        /* Barre de navigation */
+        body {
+            padding-top: 140px;
+        }
+
         .navbar-custom {
             background-color: white;
             padding: 15px;
@@ -21,11 +24,6 @@
             width: 100%;
             z-index: 999;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Pour éviter que le contenu passe sous la navbar */
-        body {
-            padding-top: 140px;
         }
 
         .btn-primary-custom {
@@ -42,24 +40,25 @@
         }
 
         .carousel-inner {
-            margin-bottom: 240px;
+            margin-bottom: 200px;
         }
 
         footer {
-            margin-top: 100px;
+            margin-top: 80px;
         }
     </style>
 </head>
 
 <body>
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-custom">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="logo.jpg" alt="logo" width="120" height="120" />
+                <img src="logo.jpg" alt="Logo du restaurant" width="120" height="120" />
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Basculer la navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -72,13 +71,13 @@
                         <a class="nav-link text-danger fw-bold" href="contact.html">Contact</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-danger fw-bold" href="projet.html" id="navbarDropdown"
+                        <a class="nav-link dropdown-toggle text-danger fw-bold" href="#" id="navbarDropdown"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            explore les differents plats
+                            Explorer les différents plats
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="projet.html">Menu midi</a></li>
-                            <li><a class="dropdown-item" href="projet2.html">Menu Aprés midi</a></li>
+                            <li><a class="dropdown-item" href="projet2.html">Menu après-midi</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -96,32 +95,30 @@
     <!-- Carrousel -->
     <div id="carouselCards" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-            <h1 class="text-center mt-4">Menu soirée</h1>
+            <h1 class="text-center mt-4">Menu Soirée</h1>
 
             <!-- Slide 1 -->
             <div class="carousel-item active">
                 <div class="d-flex flex-wrap justify-content-center gap-3">
                     <div class="card" style="width: 30rem;">
-                        <img src="images/img/pasta Pesto.webp" class="card-img-top img-fluid" alt="menu1">
+                        <img src="images/img/pasta Pesto.webp" class="card-img-top" alt="Spaghetti au persil">
                         <div class="card-body">
-                            <h5 class="card-title">spaghetti con prezzemolo </h5>
-                            <p class="card-text">Un plat simple mais raffiné composé de spaghetti al dente... 💰 Prix :
-                                8,50 €</p>
+                            <h5 class="card-title">Spaghetti con Prezzemolo</h5>
+                            <p class="card-text">Un plat simple mais raffiné, composé de spaghetti al dente parfumés au persil frais et à l’huile d’olive. 💶 Prix : 8,50 €</p>
                         </div>
                     </div>
                     <div class="card" style="width: 30rem;">
-                        <img src="images/img/kebab.jpg" class="card-img-top img-fluid" alt="menu2">
+                        <img src="images/img/kebab.jpg" class="card-img-top" alt="Kebab turc">
                         <div class="card-body">
-                            <h5 class="card-title">kebap turque</h5>
-                            <p class="card-text">Un sandwich savoureux composé de viande grillée... 💰 Prix : 9,90 €</p>
+                            <h5 class="card-title">Kebab Turc</h5>
+                            <p class="card-text">Un sandwich savoureux à la viande grillée, garni de crudités et de sauce blanche. 💶 Prix : 9,90 €</p>
                         </div>
                     </div>
                     <div class="card" style="width: 30rem;">
-                        <img src="images/img/bracciola.jpg" class="card-img-top img-fluid" alt="menu3">
+                        <img src="images/img/bracciola.jpg" class="card-img-top" alt="Brochettes Tikka">
                         <div class="card-body">
                             <h5 class="card-title">Brochettes de Poulet Tikka</h5>
-                            <p class="card-text">Tendres morceaux de poulet marinés aux épices indiennes... 💰 Prix :
-                                14,50 €</p>
+                            <p class="card-text">Poulet mariné aux épices indiennes, grillé à la perfection. Servies avec riz basmati. 💶 Prix : 14,50 €</p>
                         </div>
                     </div>
                 </div>
@@ -131,34 +128,31 @@
             <div class="carousel-item">
                 <div class="d-flex flex-wrap justify-content-center gap-3">
                     <div class="card" style="width: 30rem;">
-                        <img src="images/img/hamburger.jpg" class="card-img-top img-fluid" alt="menu4">
+                        <img src="images/img/hamburger.jpg" class="card-img-top" alt="Hamburger maison">
                         <div class="card-body">
-                            <h5 class="card-title">Hamburger </h5>
-                            <p class="card-text">Sauce tomate épicée, mozzarella, viande savoureuse... 💶 Prix : 12,50 €
-                            </p>
+                            <h5 class="card-title">Hamburger Maison</h5>
+                            <p class="card-text">Pain brioché, steak haché, mozzarella, légumes croquants et sauce spéciale. 💶 Prix : 12,50 €</p>
                         </div>
                     </div>
                     <div class="card" style="width: 30rem;">
-                        <img src="delizia.jpg" class="card-img-top img-fluid" alt="menu5">
+                        <img src="delizia.jpg" class="card-img-top" alt="Mix grill oriental">
                         <div class="card-body">
-                            <h5 class="card-title"> Assiette Mix Grill Oriental</h5>
-                            <p class="card-text">Un assortiment de viandes grillées et légumes parfumés... 💰 Prix :
-                                17,90 €</p>
+                            <h5 class="card-title">Assiette Mix Grill Oriental</h5>
+                            <p class="card-text">Un assortiment de viandes grillées (agneau, poulet, kefta) avec légumes parfumés et riz. 💶 Prix : 17,90 €</p>
                         </div>
                     </div>
                     <div class="card" style="width: 30rem;">
-                        <img src="panino.jpg" class="card-img-top img-fluid" alt="menu6">
+                        <img src="panino.jpg" class="card-img-top" alt="Kebab croustillant avec frites">
                         <div class="card-body">
-                            <h5 class="card-title">Kebab croustillant & frites dorées</h5>
-                            <p class="card-text">Pain pita garni de viande grillée, crudités et frites... 💰 Prix : 9,50
-                                €</p>
+                            <h5 class="card-title">Kebab & Frites Croustillantes</h5>
+                            <p class="card-text">Pain pita garni de viande grillée, crudités fraîches et frites dorées. 💶 Prix : 9,50 €</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Contrôles -->
+        <!-- Contrôles du carrousel -->
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselCards" data-bs-slide="prev">
             <span class="carousel-control-prev-icon"></span>
             <span class="visually-hidden">Précédent</span>
@@ -179,8 +173,9 @@
             <i class="bi bi-instagram"></i>
         </a>
         <br />
-        2025 © Copyright
+        © 2025 Restaurant Sallè Élégance - Tous droits réservés
     </footer>
+
 </body>
 
 </html>
