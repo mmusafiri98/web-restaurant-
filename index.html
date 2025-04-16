@@ -1,18 +1,30 @@
 <!DOCTYPE html>
+<!-- Déclaration du type de document HTML5 -->
 <html lang="fr">
+<!-- Début du document HTML avec la langue française -->
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Restaurant Salle Élégance</title>
+    <!-- Encodage des caractères en UTF-8 pour supporter les caractères spéciaux -->
 
-    <!-- Bootstrap CSS & Icons -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Rend le site responsive sur mobile et tablette -->
+
+    <title>Restaurant Salle Élégance</title>
+    <!-- Titre de la page affiché dans l'onglet du navigateur -->
+
+    <!-- Intégration de Bootstrap 5.3.3 pour le style CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Intégration des icônes Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <!-- Chargement du JavaScript Bootstrap avec defer pour exécuter après le chargement du HTML -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
 
+    <!-- CSS personnalisé -->
     <style>
-        /* Navbar */
+        /* Style de la barre de navigation */
         .navbar-custom {
             background-color: white;
             padding: 15px;
@@ -20,28 +32,29 @@
             top: 0;
             width: 100%;
             z-index: 999;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* ombre légère */
         }
 
-        /* Section principale */
+        /* Section principale (type héro) */
         .hero-section {
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 50px;
-            margin-top: 150px;
+            margin-top: 150px; /* espace pour éviter la superposition avec la navbar */
         }
 
         .hero-text {
             max-width: 50%;
+            /* Limite la largeur du texte */
         }
 
         .hero-image img {
             max-width: 100%;
-            border-radius: 10px;
+            border-radius: 10px; /* arrondit les bords de l'image */
         }
 
-        /* Boutons */
+        /* Style des boutons personnalisés */
         .btn-primary-custom {
             background-color: rgb(240, 48, 48);
             color: white;
@@ -50,48 +63,61 @@
             border: none;
         }
 
+        /* Style de l'image de profil ronde */
         .profile-img {
             width: 180px;
             height: 180px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid white;
+            object-fit: cover; /* adapte l’image sans la déformer */
+            border-radius: 50%; /* rend l’image circulaire */
+            border: 4px solid white; /* bordure blanche */
         }
     </style>
 </head>
 
 <body>
-    <!-- Navbar -->
+    <!-- Barre de navigation en haut de la page -->
     <nav class="navbar navbar-expand-lg navbar-custom">
         <div class="container-fluid">
+            <!-- Logo du restaurant -->
             <a class="navbar-brand">
                 <img src="images/logo.jpg" alt="logo" width="120" height="120" />
             </a>
+
+            <!-- Bouton hamburger pour mobile -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            <!-- Menu de navigation -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- Lien vers la page À propos -->
                     <li class="nav-item">
                         <a class="nav-link text-danger fw-bold" href="index.html">À propos</a>
                     </li>
+
+                    <!-- Lien vers la page Contact -->
                     <li class="nav-item">
                         <a class="nav-link text-danger fw-bold" href="contact.html">Contact</a>
                     </li>
+
+                    <!-- Menu déroulant vers les différents plats -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-danger fw-bold" href="projet.html" id="navbarDropdown"
-                            role="button" data-bs-toggle="dropdown" aria-expanded="false">Explore les différents plats</a>
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Explore les différents plats
+                        </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="projet.html">Menu midi</a></li>
                             <li><a class="dropdown-item" href="projet2.html">Menu après-midi</a></li>
-                            <li>
-                                <hr class="dropdown-divider" />
-                            </li>
+                            <li><hr class="dropdown-divider" /></li>
                             <li><a class="dropdown-item" href="projet3.html">Menu soirée</a></li>
                         </ul>
                     </li>
                 </ul>
+
+                <!-- Bouton téléphone -->
                 <form class="d-flex">
                     <button class="btn btn-primary-custom">+32 453 367 890 456</button>
                 </form>
@@ -99,13 +125,18 @@
         </div>
     </nav>
 
-    <!-- Section Témoignage -->
+    <!-- Section de témoignage avec une carte stylée  le py 5 c est pour avoir un padding verticale  de haut et en bas  un espacement assez grand (équivalent à 3rem soit 48px) -->
     <section class="py-5 mb-5" style="background-color: #C93A4A; margin-top: 150px;">
+        <!--dans mb-5 ca veut dire que on aura en especament avant le footer avec margin botton niveau 5 qui veut dire  valeur large (encore 3rem)-->
         <div class="container">
+            <!--ca serai a mettre en ligne mon contenue de maniere centre-->
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="card p-5 text-center border-0 shadow-lg" style="border-radius: 10px;">
+                        <!-- Image de profil circulaire -->
                         <img src="images/profile.jpg" class="profile-img mx-auto d-block" alt="Photo de profil" />
+
+                        <!-- Texte de présentation -->
                         <p class="mt-3 text-dark">
                             Bienvenue dans mon univers gastronomique !<br><br>
 
@@ -119,7 +150,11 @@
                             - Classiques revisités : nos interprétations modernes des grands classiques.<br>
                             - Spécialités régionales : un voyage autour du monde à travers les assiettes.
                         </p>
+
+                        <!-- Nom et métier pour colore le text en noire -->
                         <h5 class="fw-bold mt-2 text-dark">Musafiri Muyumba - Web développeur</h5>
+
+                        <!-- Étoiles de notation -->
                         <div class="mt-3">
                             <span class="text-warning"><i class="bi bi-star-fill"></i></span>
                             <span class="text-warning"><i class="bi bi-star-fill"></i></span>
@@ -127,6 +162,8 @@
                             <span class="text-warning"><i class="bi bi-star-fill"></i></span>
                             <span class="text-warning"><i class="bi bi-star-fill"></i></span>
                         </div>
+
+                        <!-- Petits points de navigation esthétique -->
                         <div class="mt-4">
                             <span class="mx-1 text-white" style="font-size: 20px;">•</span>
                             <span class="mx-1 text-white-50" style="font-size: 20px;">•</span>
@@ -138,17 +175,20 @@
         </div>
     </section>
 
+    <!-- Pied de page -->
     <footer class="p-3 bg-danger text-white text-center">
         Suivez-nous sur les réseaux sociaux :
+        <!-- Liens vers les réseaux sociaux avec icônes -->
         <a href="https://www.facebook.com" target="_blank" class="text-white mx-2">
             <i class="bi bi-facebook"></i>
         </a>
         <a href="https://www.instagram.com" target="_blank" class="text-white mx-2">
             <i class="bi bi-instagram"></i>
         </a>
-        <br>2025 © Copyright
+        <br>
+        <!-- Mention de droits d’auteur -->
+        2025 © Copyright
     </footer>
-
 </body>
 
 </html>
